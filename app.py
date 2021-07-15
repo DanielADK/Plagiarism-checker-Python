@@ -45,7 +45,7 @@ for data in sorted(check_plagiarism(), key=lambda i: float(i[2]), reverse=True):
     val = round_up(data[2]*100, 3)
     if val > 80:
         print(colored("[" + str('{:.2%}'.format(data[2])) + "] '" + data[0] + "' -> '" + data[1], 'red'))
-    elif (val < 80) & (val > 60):
+    elif (val <= 80) & (val >= 60):
         print(colored("[" + str('{:.2%}'.format(data[2])) + "] '" + data[0] + "' -> '" + data[1], 'yellow'))
     else:
         print(colored("[" + str('{:.2%}'.format(data[2])) + "] '" + data[0] + "' -> '" + data[1], 'green'))
