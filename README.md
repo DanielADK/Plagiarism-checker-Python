@@ -12,7 +12,7 @@ We all all know that computer are good at numbers, so in order to compute the si
 
 This repo consist of a basic example on how to do that.
 
-## Where is the upgrade?
+## Where is the improvement?
 
 - My fork checks and compares all files in subdirectories recursively (binary files excluded)
 - It's colorful (red: > 80%, orange: <= 80 && >= 60, green < 60%)
@@ -36,7 +36,7 @@ pip3 install -r requirements.txt
 
 ## Running the App
 
-To run this code you need to have your textual document in your project directory with extension **.txt** and then when you run the script, it will automatically loads all the document with that extension and then compute the similarity between them just as shown below;
+To run this code you need to have your non-binary documents in your "files/" directory and then when you run the script, it will automatically loads all the documents with that extension and then compute the similarity between them just as shown below;
 
 ```bash
 $-> cd Plagiarism-checker-Python
