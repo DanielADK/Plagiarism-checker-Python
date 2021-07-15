@@ -2,7 +2,7 @@
 
 This repo consists of a source code of a python script to detect plagiarism in textual document using **cosine similarity**
 
-[![Become a patron](pictures/become_a_patron_button.png)](https://www.patreon.com/kalebujordan)
+[Patreon of original creator](https://www.patreon.com/kalebujordan)
 
 ## How is it done?
 
@@ -12,13 +12,18 @@ We all all know that computer are good at numbers, so in order to compute the si
 
 This repo consist of a basic example on how to do that.
 
+## Where is the upgrade?
+
+- My fork checks and compares all files in subdirectories recursively (binary files excluded)
+- It's colorful (red: > 80%, orange: <= 80 && >= 60, green < 60%)
+- Simple visible percentage in output
 
 ## Getting started
 
 To get started with the code on this repo, you need to either *clone* or *download* this repo into your machine just as shown below;
 
 ```bash
-git clone https://github.com/Kalebu/Plagiarism-checker-Python
+git clone https://github.com/DanielADK/Plagiarism-checker-Python
 ```
 
 ## Dependencies 
@@ -36,9 +41,13 @@ To run this code you need to have your textual document in your project director
 ```bash
 $-> cd Plagiarism-checker-Python
 $ Plagiarism-checker-Python-> python3 app.py
-('john.txt', 'juma.txt', 0.5465972177348937)
-('fatma.txt', 'john.txt', 0.14806887549598566)
-('fatma.txt', 'juma.txt', 0.18643448370323362)
+Plagiarism checker
+[41.47%] 'files/kevin.html' -> 'files/max.html
+[37.63%] 'files/andrew.html' -> 'files/kevin.html
+[32.48%] 'files/jesse.html' -> 'files/max.html
+[31.58%] 'files/andrew.html' -> 'files/max.html
+[30.72%] 'files/jesse.html' -> 'files/kevin.html
+[26.73%] 'files/andrew.html' -> 'files/jesse.html
 
 ```
 
@@ -66,3 +75,4 @@ If you find this repo useful , give it a star so as many people can get to know 
 ## Credits
 
 All the credits to [kalebu](https://github.com/kalebu)
+Forker: [DanielADK](https://github.com/DanielADK)
