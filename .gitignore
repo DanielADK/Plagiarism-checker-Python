@@ -1,5 +1,6 @@
-./venv/*
-./files/*
-./last.log
-./REPOSITORIES.txt
-./git-script.sh
+venv/*
+files/*
+.idea/*
+last.log
+REPOSITORIES.txt
+git-script.sh
