@@ -1,0 +1,5 @@
+./venv/*
+./files/*
+./last.log
+./REPOSITORIES.txt
+./git-script.sh
