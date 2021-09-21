@@ -49,7 +49,7 @@ def check_plagiarism():
 
 print("Plagiarism checker")
 log = open("./last.log", "w")
-for data in sorted(check_plagiarism(), key=lambda i: float(i[2]), reverse=True):
+for data in sorted(check_plagiarism(), key=lambda i: float(i[2]), reverse=False):
     val = round_up(data[2] * 100, 3)
     if val > 80:
         print(colored("[" + str('{:.2%}'.format(data[2])) + "] '" + data[0] + "' -> '" + data[1], 'red'))
