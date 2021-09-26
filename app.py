@@ -6,8 +6,20 @@ from termcolor import colored
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-student_files = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser("files/")) for f in fn if
-                 not (is_binary(dp + "/" + f)) and not (".git") in dp and not (".gitignore" or "README.md" or ".gitconfig") in f]
+ignore = {".git", ".gitignore", "main.py", "run.sh", "README.md", ".gitconfig", ".gitkeep", ".vs"}
+
+student_files = []
+for subdir, dirs, files in os.walk("files/", os.getcwd()):
+    for dir in dirs[:]:
+        if dir in ignore:
+            dirs.remove(dir)
+    for file in files[:]:
+        if file in ignore or is_binary(subdir + os.sep + file):
+            files.remove(file)
+            break
+        filepath = subdir + os.sep + file
+        student_files.append(filepath)
+
 student_notes = [open(_file, encoding='utf-8').read()
                  for _file in student_files]
 
@@ -44,7 +56,6 @@ def check_plagiarism():
             score = (student_pair[0], student_pair[1], sim_score)
             plagiarism_results.add(score)
     return plagiarism_results
-
 
 
 print("Plagiarism checker")
